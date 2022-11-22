@@ -1,0 +1,15 @@
+schemaVersion: 2.1.0
+metadata:
+  name: devworkspace-poc
+projects:
+  - git:
+      remotes:
+        origin: 'https://github.com/harshil-codes/devworkspaces.git'
+    name: devworkspace-poc
+components:
+  - name: foo
+    container:
+      image: registry.redhat.io/ubi8:latest
+      memoryLimit: 512Mi
+      mountSources: true
+      command: ['sleep', 'infinity']
